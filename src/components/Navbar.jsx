@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { ThemeCotext } from "./context/ThemeContextProvider";
 
-const Navbar = () => {
+const Navbar = ({toggleTheme}) => {
   const { theme, toggleTheme } = useContext(ThemeCotext);
 
   return (
