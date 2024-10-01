@@ -3,9 +3,9 @@ import React, { useContext } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { ThemeCotext } from "./context/ThemeContextProvider";
 
-const Navbar = ({toggleTheme}) => {
-  const { theme, toggleTheme } = useContext(ThemeCotext);
-
+const Navbar = () => {
+  const { theme, taggleTheme } = useContext(ThemeCotext);
+  console.log(taggleTheme)
   return (
     <div className="bg-gray-100 text-gray-900 border-b border-gray-300 p-4 flex justify-between items-center dark:border-gray-600 dark:bg-gray-900 dark:text-white">
       <h1>Dashboard</h1>
@@ -15,14 +15,14 @@ const Navbar = ({toggleTheme}) => {
       <div>
         {theme === "light" ? (
           <button
-            onClick={toggleTheme}
+            onClick={taggleTheme}
             className="text-2xl bg-slate-200 w-8 h-8 flex justify-center items-center rounded-full"
           >
             <MdDarkMode />
           </button>
         ) : (
           <button
-            onClick={toggleTheme}
+            onClick={taggleTheme}
             className="text-2xl bg-slate-700 text-white w-8 h-8 flex justify-center items-center rounded-full"
           >
             <MdLightMode />

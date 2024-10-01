@@ -16,6 +16,7 @@ const ThemeContextProvider = ({ children }) => {
     setThame(theme === "light" ? "dark" : "light");
 
   };
+  
   return (
     <ThemeCotext.Provider value={{ theme, taggleTheme }}>
       {children}
